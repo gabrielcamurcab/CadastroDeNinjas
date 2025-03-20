@@ -1,6 +1,9 @@
-package com.ocamurca.cadastrodeninjas;
+package com.ocamurca.cadastrodeninjas.Ninjas;
 
+import com.ocamurca.cadastrodeninjas.Missoes.MissaoModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -12,6 +15,11 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    // Um ninja tem uma única missão
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") // Foreign Key
+    private MissaoModel missoes;
 
     public NinjaModel() {
 

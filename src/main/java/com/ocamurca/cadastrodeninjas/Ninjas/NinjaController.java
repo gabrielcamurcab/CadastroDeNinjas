@@ -1,4 +1,4 @@
-package com.ocamurca.cadastrodeninjas;
+package com.ocamurca.cadastrodeninjas.Ninjas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
